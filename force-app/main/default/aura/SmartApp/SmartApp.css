@@ -1,0 +1,241 @@
+.THIS .c-container {
+	color: #0a266a;
+	border: 1px solid #0a266a;
+	font-family: "Sofia Pro";
+}
+
+.THIS .headerDiv {
+	width: 734px;
+	height: 48px;
+	padding-top: 30px;
+}
+
+.THIS .strap-msg {
+	height: 62.4px;
+	color: #FFFFFF;
+	font-family: "Sofia Pro";
+	font-size: 28.6px;
+	font-weight: bold;
+	letter-spacing: 0;
+	line-height: 31.2px;
+	text-align: center;
+}
+
+.THIS .slds-icon-action-user {
+	border-color: white;
+	transition-duration: 0.5s;
+	border: 2px solid #ffffff;
+	background-color: #0a266a;
+}
+.THIS .slds-icon-action-user:hover {
+	cursor: pointer;
+	border: 2px solid #ffffff;
+	border-color: rgb(255,104,65);
+}
+
+.THIS .page-header {
+	text-align: center;
+}
+
+.THIS .backArrrowDiv {
+	float: left;
+	margin: 0 auto;
+	color: white;
+	font-size: 12px;
+	text-align: center;
+	border-radius: 25px;
+}
+
+.THIS .profileDiv {
+	padding-top: 5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.THIS .slds-icon_large {
+    height: 100px;
+    width: 4rem;
+}
+
+.THIS .slds-tile {
+	  margin-top: 40px;
+	  margin-bottom: 20px;
+}
+
+.THIS .backDiv {
+	padding-top: 5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.THIS .endSessionDiv {
+	float: right;
+	height: 34px;
+    width: 141px;
+	margin: 0 auto;
+	font-size: 12px;
+	color: #0a266a;
+	padding-top: 7px;
+	text-align: center;
+	border-radius: 25px;
+	transition-duration: 0.5s;
+	background-color: white;
+	border: 2px solid #ffffff;
+}
+
+.THIS .endSessionDiv:hover {
+	border-color: rgb(255,104,65);
+	cursor: pointer;
+}
+
+.THIS .slds-icon-action-user {
+	border-color: white;
+	transition-duration: 0.5s;
+	border: 2px solid #ffffff;
+	background-color: #0a266a;
+}
+
+.THIS .gridItem {
+	width: 295px;
+	margin: 20px;
+	height: 216px;
+	border-radius: 40px;
+	border-style: solid;
+	border-width: medium;
+	border-color: white;
+	transition-duration: 0.5s;
+	background-color: #FFFFFF;
+}
+
+.THIS .s-smart {
+	font-size: 50px;
+    font-family: cursive;
+    transform: rotate(-20deg);
+    color: rgb(255,104,65);
+    border: 2px solid #ffffff;
+    border-radius: 40px;
+    width: 80px;
+    height: 80px;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    padding-top: 0px;
+}
+
+.THIS .smart {
+	font-size: 70px;
+	padding-left: 10px;
+}
+
+.THIS .gridItem:hover {
+	background-color: white;
+	border-color: rgb(255,104,65);
+	color: rgb(255,104,65);
+	cursor: pointer;
+}
+
+.THIS .slds-icon-action-user:hover {
+	cursor: pointer;
+	border: 2px solid #ffffff;
+	border-color: rgb(255,104,65);
+}
+
+.THIS .h-1-copy {
+	display: flex;
+	color: white;
+	align-items: center;
+}
+
+.THIS .page-footer, .THIS .page-footer2 {
+	height: 67.4px;
+	border-radius: 43.86px;
+	padding: 25px;
+	color: #FFFFFF;
+	font-size: 21.93px;
+	letter-spacing: 0;
+	line-height: 26.32px;
+	text-align: center;
+	transition-duration: 0.5s;
+	background-color: #FF6323;
+	box-shadow: 0 2px 9px 0 rgba(0,0,0,0.2);
+}
+
+.THIS .page-footer:hover, .THIS .page-footer2:hover {
+	background-color: white;
+	border-color: rgb(255,104,65);
+	color: rgb(10,38,106);
+	cursor: pointer;
+}
+
+.THIS .page-footer {
+	width: 366.01px;
+}
+
+.THIS .page-footer2 {
+	width: 270px;
+}
+
+.THIS .profile-div1, .THIS .profile-div2 .THIS .profile-div3 {
+	padding-bottom: 20px;
+}
+
+.THIS .profile-div1 > p {
+	padding-bottom: 10px;
+}
+
+.THIS .appointmentDiv {
+	margin-top: 40px;
+	margin-bottom: 20px;
+	background: #b7e8d8;
+}
+
+.THIS .custom-box {
+	background-color: #EAF1F3;
+}
+
+.THIS .recordEdit {
+	height: 91px;
+	width: 602px;
+	border: 1px solid #FFFFFF;
+	border-radius: 8px;
+	background-color: #FFFFFF;
+}
+
+.THIS .recordEdit2 {
+	left: -130px;
+    position: relative;
+}
+
+.THIS .recordEditButton {
+	left: 140px;
+    position: relative;
+}
+
+.THIS .backDiv {
+	padding-top: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	padding-right: 10px;
+	background-color: white;
+	color:  rgb(10,38,106);
+}
+
+.THIS .backDiv:hover {
+	border-color: rgb(255,104,65);
+	cursor: pointer;
+}
+
+.THIS .contactAddress {
+	margin-top: 50px;
+    margin-left: auto;
+	margin-right: auto;
+}
+
+.THIS .h2 {
+	font-size: 32px;
+	color: #FFFFFF;
+	margin-top: 538px;
+}

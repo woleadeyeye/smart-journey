@@ -1,0 +1,11 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    }
+  ],
+  "namespace": "",
+  "sfdcLoginUrl": "https://velocity-dream-7901-dev-ed.lightning.force.com",
+  "sourceApiVersion": "48.0"
+}

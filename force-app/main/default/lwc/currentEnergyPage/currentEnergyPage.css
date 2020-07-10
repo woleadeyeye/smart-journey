@@ -1,0 +1,130 @@
+
+.c-container {
+	color: white;
+}
+.h-1 {
+	height: 24px;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 0.95px;
+}
+
+.h-1-copy {
+	font-size: 24px;
+	letter-spacing: 0;
+}
+
+.h-1-copy-parent {
+	width: 600px;
+}
+
+.path {
+	width: 50px;
+}
+
+.page-right  {
+	font-size: 20px;
+}
+.page-right-div {
+	width: 254px;
+	font-size: 20px;
+}
+
+.page-left-div {
+	width: 382px;
+	border-radius: 5px;
+	background-color: white;
+	border: 2px solid #ffffff;
+}
+
+.page-left-div-radio {
+	font-size: 18px;
+}
+
+.topLine {
+	width: 600px;
+	height: 47px;
+	border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.pathLogo {
+	height: 40px;
+}
+
+.page-header,
+.page-footer {
+	height: 50px;
+}
+
+.page-main {
+	background: #f8f8f8;
+}
+
+.kwh {
+	background-color: white;
+}
+
+.contractRadio, .billRadio {
+	margin-top: 10px;
+	transform: scale(1.5);
+}
+
+.page-footer {
+	height: 74.24px;
+	width: 366.01px;
+	border-radius: 43.86px;
+	transition-duration: 0.5s;
+	background-color: #FF6323;
+	box-shadow: 0 2px 9px 0 rgba(0,0,0,0.2);
+}
+
+.cta-text {
+	width: 366px;
+	padding: 20px;
+	height: 26.32px;
+	color: #FFFFFF;
+	font-size: 21.93px;
+	letter-spacing: 0;
+	line-height: 26.32px;
+	text-align: center;
+}
+
+a {
+	color: #FFFFFF;
+	font-size: 18px;
+}
+
+.page-footer:hover {
+	cursor: pointer;
+}
+
+.slds-icon {
+	filter: invert(16%) sepia(35%) saturate(99999%) hue-rotate(210deg) brightness(89%) contrast(107%);
+}
+
+.contractStatus {
+	margin: 5px;
+	height: 56px;
+	width: 183px;
+    font-size: 18px;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 24px;
+	padding-top: 15px;
+	border-radius: 8px;
+	text-align: center;
+	display: inline-block;
+	box-sizing: border-box;
+	font-family: "Sofia Pro";
+	border: 1px solid #04BDFF;
+	background-color: #F1FCFF;
+	box-shadow: 0 2px 20px 0 rgba(0,0,0,0.12)
+}
+
+.oval {
+	float: left;
+	width: 24px;
+	height: 24px;
+}

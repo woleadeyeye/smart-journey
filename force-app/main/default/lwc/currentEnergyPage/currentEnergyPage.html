@@ -1,0 +1,113 @@
+<template>
+    <div class="c-container">
+        <lightning-layout multiple-rows="true" class="slds-align_absolute-center isChooseServicePage">
+            <div class="headerDiv">
+                <div class="page-section page-header">
+                    <div class="backArrrowDiv" onclick={firePageChangeEvent}>
+                        <div class="backDiv"> &nbsp; &#8592; Back </div>
+                    </div>
+                    <div class="endSessionDiv slds-m-top_large"> <b style="font-weight: 900">x</b> End Session </div>
+                    <div>
+                        <div style="color: aliceblue; font-size: 18px; letter-spacing: 0.95px;">Current Energy Details</div>
+                    </div>
+                </div>
+            </div>
+        </lightning-layout>
+        <lightning-layout  multiple-rows="true" class="slds-align_absolute-center">
+            <lightning-layout-item padding="around-small" size="12">
+				<div class="h-1-copy-parent slds-align_absolute-center">
+					<div class="h-1-copy">
+						<p><b>Great news!</b> We've found the majority of your electricity details</p>
+					</div>
+					<div class="path"><img src={path} class="slds-align_absolute-right pathLogo"/></div>
+				</div>
+				<div class="topLine slds-align_absolute-center slds-m-bottom_x-large"></div>
+                <lightning-layout class="mainDiv">
+					<lightning-layout-item padding="around-small" size="12">
+						<lightning-layout class="slds-m-bottom_x-large">
+							<lightning-layout-item padding="around-small" class="page-right-div">
+								<div class="page-section page-right">
+									<h2>Your Current Supplier</h2>
+								</div>
+							</lightning-layout-item>
+							<lightning-layout-item padding="around-small" class="page-left-div">
+								<div class="page-section page-main">
+									<div><img src="https://s3.eu-west-1.amazonaws.com/supplier-logos/british-gas.png" class="supplierLogo" title="British Gas"/></div>
+								</div>
+							</lightning-layout-item>
+						</lightning-layout>
+						<lightning-layout class="slds-m-bottom_x-large">
+							<lightning-layout-item padding="around-small" class="page-right-div">
+								<div class="page-section page-right">
+									<h2>Your Meter Number (MPAN)</h2>
+								</div>
+							</lightning-layout-item>
+							<lightning-layout-item padding="around-small" class="page-left-div">
+								<div class="page-section page-main">
+									<div><img src={MPANNew} class="supplierLogo" title="MPAN"/></div>
+								</div>
+							</lightning-layout-item>
+						</lightning-layout>
+						<lightning-layout class="slds-m-bottom_x-large">
+							<lightning-layout-item padding="around-small" class="page-right-div">
+								<div class="page-section page-right">
+									<h2>Your Annual Usage</h2>
+								</div>
+							</lightning-layout-item>
+							<lightning-layout-item padding="around-small" class="page-left-div">
+								<div class="page-section page-main">
+									<div><img src={KWH} class="kwh"/></div>
+								</div>
+							</lightning-layout-item>
+						</lightning-layout>
+						<lightning-layout class="slds-m-bottom_x-large">
+							<lightning-layout-item padding="around-small" class="page-right-div">
+								<div class="page-section page-right">
+									<h2>Do you have a copy of you bill?</h2>
+								</div>
+							</lightning-layout-item>
+							<div class="page-section">
+								<div class="contractStatus">
+									<input type="radio" id="billExist" name="copyOfBill" value="Yes" class="oval">
+									<label for="billExist">Yes</label>
+								</div>
+								<div class="contractStatus">
+									<input type="radio" id="noBillExist" name="copyOfBill" value="No" class="oval">
+									<label for="noBillExist">No</label><br>
+								</div>
+							</div>
+						</lightning-layout>
+						<lightning-layout class="slds-m-bottom_x-large">
+							<lightning-layout-item padding="around-small" class="page-right-div">
+								<div class="page-section page-right">
+									<h2>Current contract status</h2>
+								</div>
+                            </lightning-layout-item>
+                            <div class="page-section">
+								<div class="contractStatus">
+									<input type="radio" id="inContract" name="contractStatus" value="In Contract" class="oval">
+									<label for="inContract">In Contract</label>
+								</div>
+								<div class="contractStatus">
+									<input type="radio" id="outOfContract" name="contractStatus" value="Out Of Contract" class="oval">
+									<label for="outOfContract">Out Of Contract</label><br>
+								</div>
+							</div>
+						</lightning-layout>
+					</lightning-layout-item>
+            	</lightning-layout>
+				<div class="topLine slds-align_absolute-center slds-m-bottom_x-large"></div>
+			</lightning-layout-item>
+            <lightning-layout-Item flexibility="auto" padding="around-small" size="12" class="slds-align_absolute-center">
+				<div>	
+					<div class="page-footer page-section">
+						<div class="cta-text"> Confirm Details </div>
+					</div>
+					<div class="slds-align_absolute-center cta-text slds-m-top_large">
+						<a href="#"> Supplier contact details </a>
+					</div>
+				</div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>
