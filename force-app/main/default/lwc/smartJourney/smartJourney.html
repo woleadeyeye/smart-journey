@@ -5,83 +5,48 @@
 			 </lightning-spinner>
 		</template>
 	</div>
-	<div class="c-container">
-		<lightning-layout if:true={isHomePage} multiple-rows="true" class="slds-align_absolute-center">
-			<div class="headerDiv">
-				<div class="page-section page-header">
-					<div class="backArrrowDiv slds-m-top_large">
-						<div class="profileDiv" onclick={openCustomerProfileModal}>
+	<div class="c-container" data-target-id="c-container">
+		<div if:true={isHomePage}>
+			<lightning-layout multiple-rows="true" class="slds-align_absolute-center slds-m-bottom_xx-large">
+				<div class="headerDiv">
+					<div class="page-section page-header">
+						<div class="backArrrowDiv" onclick={openCustomerProfileModal}>
 							<lightning-icon icon-name="action:user" alternative-text="Profile" size="small"></lightning-icon>
 						</div>
-						<div class="profileDiv"> &nbsp; &nbsp; Profile</div>
+						<div class="endSessionDiv slds-m-top_large"> <b style="font-weight: 900">x</b> End Session </div>
 					</div>
-					<div class="endSessionDiv slds-m-top_large"> <b style="font-weight: 900">x</b> End Session </div>
 				</div>
-			</div>
-			<lightning-layout multiple-rows="true" class="slds-align_absolute-center mainHomeBody">
-				<lightning-layout-item padding="around-small" size="12" class="slds-align_absolute-center">
-					<lightning-layout>
-						<div class="h-1-copy">
-							<p class="s-smart">S</p>
-							<P class="smart">smart</P>
+			</lightning-layout>
+			<lightning-layout multiple-rows="true" class="slds-align_absolute-center">
+				<lightning-layout multiple-rows="true" class="slds-align_absolute-center mainHomeBody">
+					<lightning-layout-item padding="around-small" size="12" class="slds-align_absolute-center">
+						<lightning-layout>
+							<div class="h-1-copy">
+								<p class="s-smart">S</p>
+								<P class="smart">smart</P>
+							</div>
+						</lightning-layout>
+					</lightning-layout-item>
+					<lightning-layout-item size="9" class="slds-align_absolute-center slds-m-around_x-large">
+						<div class="strap-msg slds-align_absolute-center">
+							Welcome message / smart strap line  ttytyty tytytytytyty
 						</div>
-					</lightning-layout>
-				</lightning-layout-item>
-				<lightning-layout-item size="9" class="slds-align_absolute-center slds-m-around_x-large">
-					<div class="strap-msg slds-align_absolute-center">
-						Welcome message / smart strap line  ttytyty tytytytytyty
-					</div>
-				</lightning-layout-item>
-				
-				<lightning-layout-item size="12" class="slds-align_absolute-center ">
-					<lightning-layout multiple-rows="true" class="slds-align_absolute-center">
-						<lightning-layout-item size="6" class="gridItem">
-							<div class="slds-tile slds-align_absolute-center">
-								<lightning-icon icon-name="utility:people" size="large" class="agentIcon"></lightning-icon>
-							</div>
-							<p class="slds-align_absolute-center" style="font-weight: 800">
-								AGENT NAME
-							</p>
-						</lightning-layout-item>
-						<lightning-layout-item size="6" class="gridItem">
-							<div class="slds-tile slds-align_absolute-center">
-								<lightning-icon icon-name="utility:share_post" size="large"></lightning-icon>
-							</div>
-							<p class="slds-align_absolute-center" style="font-weight: 800">
-								SMART PITCH
-							</p>
-
-						</lightning-layout-item>
-					</lightning-layout>
-				</lightning-layout-item>
-		
-				<lightning-layout-item size="12" class="slds-align_absolute-center">
-					<lightning-layout multiple-rows="true" class="slds-align_absolute-center">
-						<lightning-layout-item size="6" class="gridItem ">
-							<div class="slds-tile slds-align_absolute-center">
-								<lightning-icon icon-name="utility:moneybag" size="large"></lightning-icon>
-							</div>
-							<p class="slds-align_absolute-center" style="font-weight: 800">
-								BUSINESS
-							</p>
-						</lightning-layout-item>
-						<lightning-layout-item size="6" class="gridItem">
-							<div class="slds-tile slds-align_absolute-center">
-								<lightning-icon icon-name="utility:screen" size="large"></lightning-icon>
-							</div>
-							<p class="slds-align_absolute-center" style="font-weight: 800">
-								SCREEN SHARE
-							</p>
-						</lightning-layout-item>
-					</lightning-layout>
-				</lightning-layout-item>
-				<lightning-layout-item flexibility="auto" padding="around-small" size="12" class="slds-align_absolute-center slds-m-around_x-large">
+					</lightning-layout-item>
+				</lightning-layout>
+			</lightning-layout>
+			<lightning-layout multiple-rows="true" class="slds-align_absolute-center homePageButtons">
+				<lightning-layout-item flexibility="auto" padding="around-small" size="12" class="slds-align_absolute-center">
 					<div class="page-footer page-section" onclick={openChooseServicePage}>
 						Start a Quote
 					</div>
 				</lightning-layout-item>
+				<lightning-layout-item flexibility="auto" padding="around-small" size="12" class="slds-align_absolute-center">
+					<div class="CTA-footer page-section">
+						Pitch CTA
+					</div>
+				</lightning-layout-item>
 			</lightning-layout>
-		</lightning-layout>
+		</div>
 		
 
 		<div if:true={isChooseServicePage}>

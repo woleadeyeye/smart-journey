@@ -42,6 +42,8 @@ export default class SmartJourney extends LightningElement {
 	openChooseServicePage(){
 		this.isHomePage = false;
 		this.isChooseServicePage = true;
+		var container = this.template.querySelector('.c-container');
+		container.setAttribute("style", "background:#F1F1F1;border:1px solid #fdfdfd");
 	}
 
 	openCustomerProfileModal(){
@@ -51,6 +53,8 @@ export default class SmartJourney extends LightningElement {
 	openMainPage(){
 		this.isHomePage = true;
 		this.isChooseServicePage = false;
+		var container = this.template.querySelector('.c-container');
+		container.setAttribute("style", "background:linear-gradient(315.17deg, #051A4E 0%, #0D2C76 100%);border:1px solid #0a266a");
 	}
 
 	closeCustomerProfileModal(){

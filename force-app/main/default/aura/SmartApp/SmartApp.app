@@ -5,11 +5,9 @@
 	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
 	<aura:html tag="style">
 		body{
-			width: 768px;
-			height: 1024px;
-			margin-left: auto;
-			margin-right: auto;
-			background: linear-gradient(315.17deg, #051A4E 0%, #0D2C76 100%);
+			margin: 0;
+			width: 100vw;
+			<!-- background: linear-gradient(315.17deg, #051A4E 0%, #0D2C76 100%); -->
 		}
 	</aura:html>
 	<aura:if isTrue="{!v.pageNumber == 1}">
