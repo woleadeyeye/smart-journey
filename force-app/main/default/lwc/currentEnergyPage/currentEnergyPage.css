@@ -1,8 +1,9 @@
 
 .c-container {
-	color: white;
+	color:  #0a266a;
 	background: #F1F1F1;
-    border: 1px solid #fdfdfd;
+	font-family: "Sofia Pro";
+	border: 1px solid #fdfdfd;
 }
 .h-1 {
 	height: 24px;
@@ -110,10 +111,10 @@ a {
 	margin: 5px;
 	height: 56px;
 	width: 183px;
-    font-size: 18px;
-    color: #000000;
-    letter-spacing: 0;
-    line-height: 24px;
+	font-size: 18px;
+	color: #000000;
+	letter-spacing: 0;
+	line-height: 24px;
 	padding-top: 15px;
 	border-radius: 8px;
 	text-align: center;

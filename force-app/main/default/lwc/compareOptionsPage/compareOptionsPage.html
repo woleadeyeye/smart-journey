@@ -1,0 +1,38 @@
+<template>
+	<div class="c-container">
+		<lightning-layout multiple-rows="true" class="slds-align_absolute-center">
+			<div class="headerDiv">
+				<div class="page-section page-header">
+					<div class="backArrrowDiv" onclick={firePageChangeEvent}>
+						<div class="backDiv" data-id=2> &nbsp; &#8592; Back </div>
+					</div>
+					<div class="endSessionDiv slds-m-top_large"> <b style="font-weight: 900">x</b> End Session </div>
+					<div>
+					</div>
+				</div>
+			</div>
+		</lightning-layout>
+		<lightning-layout multiple-rows="true" class="slds-align_absolute-center service-options">
+			<lightning-layout-item size="12" class=" ">
+				<div class="slds-align_absolute-center h2">
+					What service would you like to compare?
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item flexibility="auto" padding="around-small" size="12" class="slds-align_absolute-center">
+				<div class="page-footer page-section" onclick={firePageChangeEvent} data-id=4>
+					Gas & electricity
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item flexibility="auto" padding="around-small" size="12" class="slds-align_absolute-center">
+				<div class="page-footer page-section" onclick={firePageChangeEvent} data-id=4>
+					Gas
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item flexibility="auto" padding="around-small" size="12" class="slds-align_absolute-center">
+				<div class="page-footer page-section" onclick={firePageChangeEvent} data-id=4>
+					Electricity
+				</div>
+			</lightning-layout-item>
+		</lightning-layout>
+	</div>
+</template>

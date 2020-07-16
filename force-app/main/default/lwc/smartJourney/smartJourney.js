@@ -1,6 +1,6 @@
-import { LightningElement, api, track, wire } from 'lwc';
+import { LightningElement, api, wire } from 'lwc';
 import MPAN from '@salesforce/resourceUrl/MPAN';
-import { getRecord } from 'lightning/uiRecordApi';
+import { pageChangeEvent } from 'c/smartUtils';
 import getAccountRecords from '@salesforce/apex/SmartJourneyController.getAccountList';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import SMART_LOGO from '@salesforce/resourceUrl/HomePageHeader';
@@ -8,17 +8,10 @@ import SMART_LOGO from '@salesforce/resourceUrl/HomePageHeader';
 export default class SmartJourney extends LightningElement {
 
 	@api recordId;
+	accountDetails = {};
 	isLoading = false;
-	accountRecord;
-	accountName;
-	contactName;
-	contactAddress;
-	contactNotes;
-	randomText;
-	error;
 	isHomePage = true;
 	isCustomerProfileOpen = false;
-	editAddressModal = false;
 	SmartImage = SMART_LOGO;
 	mpanImage = MPAN;
 
@@ -26,54 +19,35 @@ export default class SmartJourney extends LightningElement {
 	wiredRecordsMethod({ error, data }) {
 		if (data) {
 			this.accountRecord  = data;
-			this.recordId = data[0].Contacts[0].Id;
-			this.accountName = data[0].Name;
-			this.contactName = data[0].Contacts[0].Name;
-			let billingAddress = data[0].BillingAddress;
-			this.contactNotes = data[0].NotesfromLeadCreation__c;
-			this.contactAddress = billingAddress.street + ', ' + billingAddress.city + ', ' + billingAddress.postalCode;
-			this.error = undefined;
+			this.accountDetails.accountRecord = data;
+			this.accountDetails.recordId = data[0].Contacts[0].Id;
+			this.accountDetails.accountName = data[0].Name;
+			this.accountDetails.contactName = data[0].Contacts[0].Name;
+			this.accountDetails.FirstName = data[0].Contacts[0].FirstName;
+			this.accountDetails.LastName = data[0].Contacts[0].LastName;
+			this.accountDetails.billingAddress = data[0].BillingAddress;
+			this.accountDetails.BillingStreet = this.accountDetails.billingAddress.street;
+			this.accountDetails.BillingCity = this.accountDetails.billingAddress.city;
+			this.accountDetails.BillingPostalCode = this.accountDetails.billingAddress.postalCode;
+			this.accountDetails.NotesfromLeadCreation__c = data[0].NotesfromLeadCreation__c;
+			this.accountDetails.contactAddress = this.accountDetails.billingAddress.street + ', ' + this.accountDetails.billingAddress.city + ', ' + this.accountDetails.billingAddress.postalCode;
+			this.accountDetails.error = undefined;
 		} else if (error) {
 			this.error = error;
 			this.accountRecord  = undefined;
 		}
 	}
 
-	openChooseServicePage(){
-		this.isHomePage = false;
-		this.isChooseServicePage = true;
-		var container = this.template.querySelector('.c-container');
-		container.setAttribute("style", "background:#F1F1F1;border:1px solid #fdfdfd");
+	renderedCallback() {
+		document.querySelector('body').setAttribute("style", "background-color: #08266B;border:1px solid #fdfdfd;color:white;");
 	}
 
 	openCustomerProfileModal(){
 		this.isCustomerProfileOpen = true;
 	}
 
-	openMainPage(){
-		this.isHomePage = true;
-		this.isChooseServicePage = false;
-		var container = this.template.querySelector('.c-container');
-		container.setAttribute("style", "background:linear-gradient(315.17deg, #051A4E 0%, #0D2C76 100%);border:1px solid #0a266a");
-	}
-
 	closeCustomerProfileModal(){
 		this.isCustomerProfileOpen = false;
-	}
-
-	handleEditAddressModal(){
-		this.editAddressModal = true;
-	}
-
-	closeRecordEditModal(){
-		this.editAddressModal = false;
-	}
-
-	handleRecordEditSuccess(){
-		this.showNotification();
-		setTimeout(() => {
-			this.editAddressModal = false;
-		}, 1000);
 	}
 
 	showNotification() {
@@ -84,26 +58,19 @@ export default class SmartJourney extends LightningElement {
 		});
 		this.dispatchEvent(evt);
 	}
-
-	firePageChangeEvent(){
-		this.isLoading = true;
+	firePageChangeEvent(event){
+		pageChangeEvent(event.target.dataset.id, this.accountDetails, this);
+		/*this.isLoading = true;
+		const value = event.target.dataset.id;
 
 		let timeout = new Promise((resolve, reject) => {
 			let wait = setTimeout(() => {
 				clearTimeout(wait);
-				this.changePageEvent();
+				this.changePageEvent(value);
 				this.isLoading = false;
-			}, 800)
+			}, 100)
 		  })
 
-		timeout;
-	}
-
-	changePageEvent(){
-		const value = 2;
-		const pageChangeEvent = new CustomEvent('pagechange', {
-            detail:  { value }
-        });
-		this.dispatchEvent(pageChangeEvent);
+		timeout;*/
 	}
 }

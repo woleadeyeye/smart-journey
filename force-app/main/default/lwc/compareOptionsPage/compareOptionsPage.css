@@ -1,0 +1,9 @@
+.service-options {
+	margin-top: 275px;
+}
+
+@media only screen and (max-height : 700px) {
+	.service-options {
+		margin-top: 140px;
+	}
+}

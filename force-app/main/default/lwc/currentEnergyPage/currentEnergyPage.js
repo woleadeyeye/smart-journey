@@ -1,5 +1,6 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, api } from 'lwc';
 import KWH from '@salesforce/resourceUrl/KWH';
+import { pageChangeEvent } from 'c/smartUtils';
 import path from '@salesforce/resourceUrl/path';
 import MPAN from '@salesforce/resourceUrl/MPAN';
 import MPANNew from '@salesforce/resourceUrl/MPANNew';
@@ -13,6 +14,7 @@ export default class CurrentEnergyPage extends LightningElement {
 	backArrow = backArrow;
 	copyOfBillsValue = '';
 	contractStatusValue = '';
+	@api accountDetails;
 
 	get copyOfBillsOptions() {
 		return [
@@ -28,12 +30,8 @@ export default class CurrentEnergyPage extends LightningElement {
 		];
 	}
 
-	firePageChangeEvent(){
-		const value = 1;
-		const pageChangeEvent = new CustomEvent('pagechange', {
-			detail:  { value }
-		});
-		this.dispatchEvent(pageChangeEvent);
+	firePageChangeEvent(event){
+		pageChangeEvent(event.target.dataset.id, this.accountDetails, this);
 	}
 
 }

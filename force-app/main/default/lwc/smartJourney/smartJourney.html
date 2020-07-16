@@ -5,125 +5,46 @@
 			 </lightning-spinner>
 		</template>
 	</div>
-	<div class="c-container" data-target-id="c-container">
-		<div if:true={isHomePage}>
-			<lightning-layout multiple-rows="true" class="slds-align_absolute-center slds-m-bottom_xx-large">
-				<div class="headerDiv">
-					<div class="page-section page-header">
-						<div class="backArrrowDiv" onclick={openCustomerProfileModal}>
-							<lightning-icon icon-name="action:user" alternative-text="Profile" size="small"></lightning-icon>
-						</div>
-						<div class="endSessionDiv slds-m-top_large"> <b style="font-weight: 900">x</b> End Session </div>
+	<div class="c-container">
+		<lightning-layout multiple-rows="true" class="slds-align_absolute-center slds-m-bottom_xx-large">
+			<div class="headerDiv">
+				<div class="page-section page-header">
+					<div class="backArrrowDiv" onclick={openCustomerProfileModal}>
+						<lightning-icon icon-name="action:user" alternative-text="Profile" size="small"></lightning-icon>
 					</div>
+					<div class="endSessionDiv slds-m-top_large"> <b style="font-weight: 900">x</b> End Session </div>
 				</div>
-			</lightning-layout>
-			<lightning-layout multiple-rows="true" class="slds-align_absolute-center">
-				<lightning-layout multiple-rows="true" class="slds-align_absolute-center mainHomeBody">
-					<lightning-layout-item padding="around-small" size="12" class="slds-align_absolute-center">
-						<lightning-layout>
-							<div class="h-1-copy">
-								<p class="s-smart">S</p>
-								<P class="smart">smart</P>
-							</div>
-						</lightning-layout>
-					</lightning-layout-item>
-					<lightning-layout-item size="9" class="slds-align_absolute-center slds-m-around_x-large">
-						<div class="strap-msg slds-align_absolute-center">
-							Welcome message / smart strap line  ttytyty tytytytytyty
-						</div>
-					</lightning-layout-item>
-				</lightning-layout>
-			</lightning-layout>
-			<lightning-layout multiple-rows="true" class="slds-align_absolute-center homePageButtons">
-				<lightning-layout-item flexibility="auto" padding="around-small" size="12" class="slds-align_absolute-center">
-					<div class="page-footer page-section" onclick={openChooseServicePage}>
-						Start a Quote
-					</div>
-				</lightning-layout-item>
-				<lightning-layout-item flexibility="auto" padding="around-small" size="12" class="slds-align_absolute-center">
-					<div class="CTA-footer page-section">
-						Pitch CTA
-					</div>
-				</lightning-layout-item>
-			</lightning-layout>
-		</div>
-		
-
-		<div if:true={isChooseServicePage}>
-			<lightning-layout multiple-rows="true" class="slds-align_absolute-center isChooseServicePage">
-				<div class="headerDiv">
-					<div class="page-section page-header">
-						<div class="backArrrowDiv" onclick={openMainPage}>
-							<div class="backDiv"> &nbsp; &#8592; Back </div>
-						</div>
-						<div class="endSessionDiv slds-m-top_large"> <b style="font-weight: 900">x</b> End Session </div>
-						<div>
-							<div style="color: aliceblue; font-size: 18px; letter-spacing: 0.95px;">Choose a service</div>
-						</div>
-					</div>
-				</div>
-			</lightning-layout>
-			<lightning-layout multiple-rows="true" class="slds-align_absolute-center">
-				<lightning-layout-item size="12" class="slds-m-horizontal_x-large slds-m-bottom_xx-large">
-					<div class="slds-tile slds-align_absolute-center recordEdit">
-						<div class="recordEdit2">
-							{accountName}<br></br>
-							{contactAddress}
-						</div>
-						<div>
-							<lightning-button variant="brand-outline" label="Edit" title="Edit Contact" onclick={handleEditAddressModal} class="slds-m-left_x-small recordEditButton"></lightning-button>
-						</div>
-					</div>
-				</lightning-layout-item>
-			</lightning-layout>
-			<lightning-layout multiple-rows="true" class="slds-align_absolute-center">
-				<lightning-layout-item size="12" class=" ">
-					<div class="slds-align_absolute-center h2">
-						What would you like to compare?
-					</div>
-				</lightning-layout-item>
-				<lightning-layout-item flexibility="auto" padding="around-small" size="12" class="slds-align_absolute-center">
-					<div class="page-footer page-section" onclick={firePageChangeEvent}>
-						Gas & electricity
-					</div>
-				</lightning-layout-item>
-				<lightning-layout-item flexibility="auto" padding="around-small" size="12" class="slds-align_absolute-center">
-					<div class="page-footer2 page-section" style="margin-right: 21px;">
-						Electricity
-					</div>
-					<div class="page-footer2 page-section">
-						Gas
-					</div>
-				</lightning-layout-item>
-			</lightning-layout>
-		</div>
-	</div>
-
-	<template if:true={editAddressModal}>
-		<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open contactAddress">
-			<header class="slds-modal__header">
-				<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeRecordEditModal}>
-					<lightning-icon icon-name="utility:close"
-						alternative-text="close"
-						variant="inverse"
-						size="small" ></lightning-icon>
-					<span class="slds-assistive-text">Close</span>
-				</button>
-				<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Edit Contact</h2>
-			</header>
-			<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
-				<lightning-record-edit-form record-id={recordId} object-api-name="Contact" onsuccess={handleRecordEditSuccess}>
-					<lightning-messages></lightning-messages>
-					<lightning-output-field field-name="AccountId"></lightning-output-field>
-					<lightning-input-field field-name="MailingAddress"></lightning-input-field>
-					<lightning-input-field field-name="FirstName"></lightning-input-field>
-					<lightning-input-field field-name="LastName"></lightning-input-field>
-					<lightning-button class="slds-m-top_small slds-align_absolute-center" variant="brand" type="submit" name="update" label="Update"></lightning-button>
-				</lightning-record-edit-form>
 			</div>
-		</section>
-		<div class="slds-backdrop slds-backdrop_open"></div>
-	</template>
+		</lightning-layout>
+		<lightning-layout multiple-rows="true" class="slds-align_absolute-center">
+			<lightning-layout multiple-rows="true" class="slds-align_absolute-center mainHomeBody">
+				<lightning-layout-item padding="around-small" size="12" class="slds-align_absolute-center">
+					<lightning-layout>
+						<div class="h-1-copy">
+							<div><img src={SmartImage}/></div>
+						</div>
+					</lightning-layout>
+				</lightning-layout-item>
+				<lightning-layout-item size="9" class="slds-align_absolute-center slds-m-around_x-large">
+					<div class="strap-msg slds-align_absolute-center">
+						Welcome message / smart strap line  ttytyty tytytytytyty
+					</div>
+				</lightning-layout-item>
+			</lightning-layout>
+		</lightning-layout>
+		<lightning-layout multiple-rows="true" class="slds-align_absolute-center homePageButtons">
+			<lightning-layout-item flexibility="auto" padding="around-small" size="12" class="slds-align_absolute-center">
+				<div class="page-footer page-section" onclick={firePageChangeEvent} data-id=2>
+					Start a Quote
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item flexibility="auto" padding="around-small" size="12" class="slds-align_absolute-center">
+				<div class="CTA-footer page-section">
+					Pitch CTA
+				</div>
+			</lightning-layout-item>
+		</lightning-layout>
+	</div>
 
 	<template if:true={isCustomerProfileOpen}>
 		<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
@@ -140,13 +61,13 @@
 				</header>
 				<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
 					<div class="profile-div1">
-						<p> {contactName} </p>
-						<p><b> {accountName} </b></p>
-						<p> {contactAddress} </p>
+						<p> {accountDetails.contactName} </p>
+						<p><b> {accountDetails.accountName} </b></p>
+						<p> {accountDetails.contactAddress} </p>
 					</div>
 					<div class="profile-div2">
 						<p><b>Notes</b></p>
-						<p> {contactNotes} </p>
+						<p> {accountDetails.NotesfromLeadCreation__c} </p>
 					</div>
 					<div class="profile-div3">
 						<div class="appointmentDiv">Appointment booked: May 25th 2020 2:30 pm</div>

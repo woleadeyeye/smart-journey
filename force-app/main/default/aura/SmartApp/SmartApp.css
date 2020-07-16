@@ -1,8 +1,6 @@
 .THIS .c-container {
 	color: #0a266a;
 	font-family: "Sofia Pro";
-	border: 1px solid #0a266a;
-	background: linear-gradient(315.17deg, #051A4E 0%, #0D2C76 100%);
 }
 
 .THIS .headerDiv {
@@ -14,12 +12,16 @@
 .THIS .strap-msg {
 	height: 62.4px;
 	color: #FFFFFF;
-	font-family: "Sofia Pro";
 	font-size: 28.6px;
 	font-weight: bold;
 	letter-spacing: 0;
 	line-height: 31.2px;
 	text-align: center;
+}
+
+.THIS .slds-modal {
+	color: black;
+	font-family: monospace;
 }
 
 .THIS .slds-icon-action-user {
@@ -54,8 +56,8 @@
 }
 
 .THIS .slds-icon_large {
-    height: 100px;
-    width: 4rem;
+	height: 100px;
+	width: 4rem;
 }
 
 .THIS .slds-tile {
@@ -72,7 +74,7 @@
 .THIS .endSessionDiv {
 	float: right;
 	height: 34px;
-    width: 141px;
+	width: 141px;
 	margin: 0 auto;
 	font-size: 12px;
 	color: #0a266a;
@@ -96,30 +98,18 @@
 	background-color: #0a266a;
 }
 
-.THIS .gridItem {
-	width: 295px;
-	margin: 20px;
-	height: 216px;
-	border-radius: 40px;
-	border-style: solid;
-	border-width: medium;
-	border-color: white;
-	transition-duration: 0.5s;
-	background-color: #FFFFFF;
-}
-
 .THIS .s-smart {
 	font-size: 50px;
-    font-family: cursive;
-    transform: rotate(-20deg);
-    color: rgb(255,104,65);
-    border: 2px solid #ffffff;
-    border-radius: 40px;
-    width: 80px;
-    height: 80px;
-    padding-bottom: 80px;
-    padding-left: 20px;
-    padding-top: 0px;
+	font-family: cursive;
+	transform: rotate(-20deg);
+	color: rgb(255,104,65);
+	border: 2px solid #ffffff;
+	border-radius: 40px;
+	width: 80px;
+	height: 80px;
+	padding-bottom: 80px;
+	padding-left: 20px;
+	padding-top: 0px;
 }
 
 .THIS .smart {
@@ -127,12 +117,6 @@
 	padding-left: 10px;
 }
 
-.THIS .gridItem:hover {
-	background-color: white;
-	border-color: rgb(255,104,65);
-	color: rgb(255,104,65);
-	cursor: pointer;
-}
 
 .THIS .slds-icon-action-user:hover {
 	cursor: pointer;
@@ -142,7 +126,6 @@
 
 .THIS .h-1-copy {
 	display: flex;
-	color: white;
 	align-items: center;
 }
 
@@ -209,30 +192,12 @@
 	background-color: #EAF1F3;
 }
 
-.THIS .recordEdit {
-	height: 91px;
-	width: 602px;
-	border: 1px solid #FFFFFF;
-	border-radius: 8px;
-	background-color: #FFFFFF;
-}
-
-.THIS .recordEdit2 {
-	left: -130px;
-    position: relative;
-}
-
-.THIS .recordEditButton {
-	left: 140px;
-    position: relative;
-}
-
 .THIS .backDiv {
 	padding-top: 5px;
-    display: inline-block;
-    vertical-align: middle;
-    border: 2px solid #ffffff;
-    border-radius: 25px;
+	display: inline-block;
+	vertical-align: middle;
+	border: 2px solid #ffffff;
+	border-radius: 25px;
 	padding-left: 5px;
 	padding-bottom: 5px;
 	padding-right: 10px;
@@ -245,18 +210,28 @@
 	cursor: pointer;
 }
 
-.THIS .contactAddress {
-	margin-top: 50px;
-    margin-left: auto;
-	margin-right: auto;
-}
-
 .THIS .h2 {
 	font-size: 32px;
-	color: #FFFFFF;
-	margin-top: 538px;
 }
 
-.THIS .homePageButtons{
-	margin-top: 460px;
+.THIS .confirmDets {
+	font-size: 28.6px;
+	font-weight: bold;
+}
+
+.THIS .slds-input {
+	height: 72px;
+	font-size: large;
+}
+
+@media only screen and (max-height : 1000px) {
+	.THIS .homePageButtons {
+		margin-top: 40vh;
+	}
+}
+
+@media only screen and (max-height : 800px) {
+	.THIS .homePageButtons {
+		margin-top: 20vh;
+	}
 }
