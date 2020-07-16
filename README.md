@@ -1,3 +1,12 @@
+# Creating a scratch Org
+You can play with everything in this repo in your own disposable org.
+use: sfdx force:org:create -f config/project-scratch-def.json -d 30 adminEmail=<youur email> k --targetdevhubusername <your production username>
+    
+# push the repo into your new scratch org
+assuming you've already cloned this repo, use this command to push everything into your new org:
+sfdx force:source:push -f
+
+
 # Salesforce App
 
 This guide helps Salesforce developers who are new to Visual Studio Code go from zero to a deployed app using Salesforce Extensions for VS Code and Salesforce CLI.
