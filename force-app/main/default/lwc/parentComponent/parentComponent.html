@@ -1,0 +1,14 @@
+<template>
+	<template if:true={homePage}>
+		<c-smart-journey account-details-from-parent={accountDetails} onpagechange={handlePageChangeEvent}></c-smart-journey>
+	</template>
+	<template if:true={confirmDetail}>
+		<c-confirm-details-page account-details-from-parent={accountDetails} onpagechange={handlePageChangeEvent}></c-confirm-details-page>
+	</template>
+	<template if:true={compareOptions}>
+		<c-compare-options-page onpagechange={handlePageChangeEvent}></c-compare-options-page>
+	</template>
+	<template if:true={currentEnergy}>
+		<c-current-energy-page onpagechange={handlePageChangeEvent}></c-current-energy-page>
+	</template>
+</template>

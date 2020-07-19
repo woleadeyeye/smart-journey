@@ -31,7 +31,7 @@ export default class CurrentEnergyPage extends LightningElement {
 	}
 
 	firePageChangeEvent(event){
-		pageChangeEvent(event.target.dataset.id, this.accountDetails, this);
+		pageChangeEvent(event, this);
 	}
 
 }

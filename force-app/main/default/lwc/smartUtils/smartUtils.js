@@ -10,15 +10,9 @@ const showToast = (variant = 'info', mode = 'dismissable', title, message) => {
 	return event;
 }
 
-const pageChangeEvent = (idValue = '1', accountDets, event) => {
-	var value = {
-		value: idValue,
-		accountDets: accountDets
-	};
-	const pageChangeEvent = new CustomEvent('pagechange', {
-		detail:  { value }
-	});
-	event.dispatchEvent(pageChangeEvent);
+const pageChangeEvent = (event, cmp) => {
+	const pageChangeEvent = new CustomEvent('pagechange', { detail: event.target.dataset.id });
+	cmp.dispatchEvent(pageChangeEvent);
 }
 
 const makeShallowCopy = (source) => {

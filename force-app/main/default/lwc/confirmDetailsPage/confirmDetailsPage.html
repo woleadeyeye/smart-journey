@@ -8,7 +8,7 @@
 					</div>
 					<div class="endSessionDiv slds-m-top_large"> <b style="font-weight: 900">x</b> End Session </div>
 					<div>
-						<div style="color: aliceblue; font-size: 18px; letter-spacing: 0.95px;">Choose a service</div>
+						<div style="color: #0a266a; font-size: 18px; letter-spacing: 0.95px;">Choose a service</div>
 					</div>
 				</div>
 			</div>
@@ -19,18 +19,18 @@
 			</lightning-layout-item>
 			<lightning-layout-item size="12" class="slds-align_absolute-center slds-m-bottom_medium">
 				<div class="slds-m-horizontal_medium">
-					<lightning-input value={accountDetails.FirstName} name="Contact-FirstName" label="First Name" required style="width: 257px;" onblur={handleDetailChange}></lightning-input>
+					<lightning-input value={accountDetailsFromParent.FirstName} name="Contact-FirstName" label="First Name" required style="width: 257px;" onblur={handleDetailChange}></lightning-input>
 				</div>
 				<div class="slds-m-horizontal_medium">
-					<lightning-input value={accountDetails.LastName} name="Contact-LastName" label="Last Name" required style="width: 257px;" onblur={handleDetailChange}></lightning-input>
+					<lightning-input value={accountDetailsFromParent.LastName} name="Contact-LastName" label="Last Name" required style="width: 257px;" onblur={handleDetailChange}></lightning-input>
 				</div>
 			</lightning-layout-item>
 			<lightning-layout-item size="12" class="slds-align_absolute-center slds-m-bottom_medium">
-				<lightning-input value={accountDetails.accountName} name="Account-Name" label="Business Name" required style="width: 535px;" onblur={handleDetailChange}></lightning-input>
+				<lightning-input value={accountDetailsFromParent.accountName} name="Account-Name" label="Business Name" required style="width: 535px;" onblur={handleDetailChange}></lightning-input>
 			</lightning-layout-item>
 
 			<lightning-layout-item size="12" class="slds-align_absolute-center slds-m-bottom_medium">
-				<lightning-input value={accountDetails.BillingStreet} name="Account-BillingStreet" label="Address" required style="width: 535px;" onblur={handleDetailChange}></lightning-input>
+				<lightning-input value={accountDetailsFromParent.BillingStreet} name="Account-BillingStreet" label="Address" required style="width: 535px;" onblur={handleDetailChange}></lightning-input>
 			</lightning-layout-item>
 
 			<lightning-layout-item size="12" class="slds-align_absolute-center slds-m-bottom_medium">
@@ -39,10 +39,10 @@
 
 			<lightning-layout-item size="12" class="slds-align_absolute-center slds-m-bottom_xx-large">
 				<div class="slds-m-horizontal_medium">
-					<lightning-input value={accountDetails.BillingCity} name="Account-BillingCity" label="City" required style="width: 257px;" onblur={handleDetailChange}></lightning-input>
+					<lightning-input value={accountDetailsFromParent.BillingCity} name="Account-BillingCity" label="City" required style="width: 257px;" onblur={handleDetailChange}></lightning-input>
 				</div>
 				<div class="slds-m-horizontal_medium">
-					<lightning-input value={accountDetails.BillingPostalCode} name="Account-BillingPostalCode" label="Postcode" required style="width: 257px;" onblur={handleDetailChange}></lightning-input>
+					<lightning-input value={accountDetailsFromParent.BillingPostalCode} name="Account-BillingPostalCode" label="Postcode" required style="width: 257px;" onblur={handleDetailChange}></lightning-input>
 				</div>
 			</lightning-layout-item>
 		</lightning-layout>
