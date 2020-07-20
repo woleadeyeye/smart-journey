@@ -1,10 +1,18 @@
-# Creating a scratch Org
-You can play with everything in this repo in your own disposable org.
-use: sfdx force:org:create -f config/project-scratch-def.json -d 30 adminEmail=<youur email> k --targetdevhubusername <your production username>
-    
-# push the repo into your new scratch org
-assuming you've already cloned this repo, use this command to push everything into your new org:
-sfdx force:source:push -f
+# Installing Smart
+1. **Clone the smart repo : **
+```
+    git clone https://github.com/woleadeyeye/smart-journey
+```
+
+2. **Create a scratch org : **
+```
+    sfdx force:org:create -f config/project-scratch-def.json -d 30 adminEmail= <your-username>
+```
+
+3. **Push the package : **
+```
+    sfdx force:source:push -f
+```
 
 
 # Salesforce App
