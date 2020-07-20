@@ -1,15 +1,15 @@
 # Installing Smart
-1. **Clone the smart repo : **
+1. **Clone the smart repo :**
 ```
     git clone https://github.com/woleadeyeye/smart-journey
 ```
 
-2. **Create a scratch org : **
+2. **Create a scratch org :**
 ```
     sfdx force:org:create -f config/project-scratch-def.json -d 30 adminEmail= <your-username>
 ```
 
-3. **Push the package : **
+3. **Push the package :**
 ```
     sfdx force:source:push -f
 ```
